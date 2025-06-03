@@ -146,26 +146,23 @@
     <!-- Header -->
     <header id="header" class="bg-off-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center h-20">
                 <div class="flex-shrink-0">
                     <a href="#home">
                         <img class="logo-img" src="https://i.imgur.com/TyVy6X2.png" alt="Logo Rachel Purón - Música para Casar">
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <!-- Navigation Links (centered) -->
+                <div class="hidden md:flex flex-grow justify-center items-center space-x-1 lg:space-x-2">
                     <a href="#home" class="nav-link nav-link-active">Início</a>
                     <a href="#sobre" class="nav-link">Sobre Rachel</a>
                     <a href="#servicos" class="nav-link">Serviços</a>
                     <a href="#portfolio" class="nav-link">Portfólio</a>
                     <a href="#repertorio" class="nav-link">Repertório</a>
                     <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                    <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6">Agende uma conversa</a>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-dark-teal hover:text-rose-gold focus:outline-none p-2 rounded-md">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+                <!-- Button (right) -->
+                <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6">Agende uma conversa</a>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden bg-off-white shadow-xl absolute w-full transform -translate-x-full py-3 px-4">
@@ -182,8 +179,9 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="relative text-off-white overflow-hidden min-h-screen flex items-center justify-center">
-            <!-- Vídeo de fundo (placeholder) -->
+            <!-- Vídeo de fundo -->
             <video autoplay muted loop playsinline class="hero-video-bg" poster="https://placehold.co/1920x1080/1A3A40/F8F5F2?text=Momento+Musical+Inesquecível">
+                <!-- Substitua './videos/inicio.mp4' pelo link direto do seu vídeo hospedado (ex: Imgur ou outro CDN) -->
                 <source src="./videos/inicio.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 hero-overlay"></div>
@@ -199,7 +197,8 @@
             <div class="container mx-auto">
                 <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-2">
-                        <img src="https://placehold.co/500x600/B08D77/FFFFFF?text=Rachel+Purón" alt="Rachel Purón" class="rounded-xl shadow-2xl w-full object-cover aspect-[4/5]">
+                        <!-- Foto da Rachel Purón atualizada -->
+                        <img src="https://i.imgur.com/CgzQnoX.png" alt="Rachel Purón" class="rounded-xl shadow-2xl w-full object-cover aspect-[4/5]">
                     </div>
                     <div class="lg:col-span-3">
                         <p class="font-dancing text-rose-gold text-2xl mb-2">Paixão em cada nota</p>
@@ -225,16 +224,19 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card p-8 text-center transform hover:-translate-y-2">
+                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Cerimônia no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Cerimônia" alt="Ícone Cerimônia" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Música para Cerimônia</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Encante seus convidados com melodias que tocam a alma durante a cerimônia. Solos, duetos, quartetos e formações instrumentais.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
+                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Recepção no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Recepção" alt="Ícone Recepção" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Música para Recepção</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Crie uma atmosfera elegante e acolhedora para o coquetel e jantar, com repertório que vai do jazz suave ao pop acústico.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
+                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Festa no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Festa" alt="Ícone Festa" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Banda para Festa</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Nossa banda traz energia e um repertório vibrante para animar a pista de dança e celebrar com todos os seus convidados.</p>
@@ -254,6 +256,7 @@
                     <h2>Nosso Portfólio</h2>
                 </div>
                 <div class="gallery-carousel mb-12">
+                    <!-- Substitua os links do placehold.co pelos links diretos das suas imagens de portfólio no Imgur -->
                     <div><img src="https://placehold.co/800x500/B08D77/FFFFFF?text=Casamento+Elegante+1" alt="Foto de casamento com música ao vivo 1" class="w-full h-auto object-cover"></div>
                     <div><img src="https://placehold.co/800x500/C5A08A/1A3A40?text=Performance+Musical+2" alt="Foto de casamento com música ao vivo 2" class="w-full h-auto object-cover"></div>
                     <div><img src="https://placehold.co/800x500/1A3A40/FFFFFF?text=Detalhe+Instrumento+3" alt="Foto de casamento com música ao vivo 3" class="w-full h-auto object-cover"></div>
@@ -264,9 +267,11 @@
                     <h3 class="mb-4">Vídeos de Performances</h3>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
+                            <!-- Substitua 'https://www.youtube.com/embed/dQw4w9WgXcQ' pelo link real do seu vídeo do YouTube -->
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
+                            <!-- Substitua 'https://www.youtube.com/embed/rokGy0huYEA' pelo link real do seu vídeo do YouTube -->
                              <iframe class="w-full h-full" src="https://www.youtube.com/embed/rokGy0huYEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -302,6 +307,7 @@
                 </div>
                 <div class="mt-10 text-center">
                     <p class="text-gray-200 mb-6 max-w-xl mx-auto">Cada canção é escolhida e adaptada para refletir a personalidade e o gosto do casal, tornando cada momento único.</p>
+                    <!-- Substitua o link do placehold.co pelo link direto do seu PDF de repertório no Imgur ou outro serviço -->
                     <a href="https://placehold.co/1000x700/F8F5F2/1A3A40?text=Exemplo+de+Repertório+(PDF)" target="_blank" class="btn btn-secondary !text-off-white !border-off-white hover:!bg-off-white hover:!text-dark-teal">Baixar Sugestões de Repertório</a>
                 </div>
             </div>
@@ -318,6 +324,7 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Rachel, não temos palavras para agradecer a emoção que você trouxe ao nosso casamento. Sua voz é um anjo! Todos os convidados comentaram sobre a música da cerimônia. Foi perfeito!"</p>
                         <div class="text-center">
+                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=L+F" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Laura & Fernando</h4>
                             <p class="text-sm text-gray-500">Casamento em Itatiba, SP</p>
@@ -326,6 +333,7 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"A banda da festa foi incrível! Repertório de primeira, animação total e muito profissionalismo. Rachel e sua equipe fizeram a diferença na nossa celebração. Recomendamos de olhos fechados!"</p>
                         <div class="text-center">
+                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=A+M" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Ana Clara & Miguel</h4>
                             <p class="text-sm text-gray-500">Casamento em Campinas, SP</p>
@@ -334,6 +342,7 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Desde o primeiro contato, a Rachel foi extremamente atenciosa e entendeu perfeitamente o que queríamos. A música da recepção estava elegante e agradou a todos. Muito obrigada!"</p>
                         <div class="text-center">
+                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=P+G" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Patrícia & Gabriel</h4>
                             <p class="text-sm text-gray-500">Casamento em Jundiaí, SP</p>
@@ -342,6 +351,7 @@
                        <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Que talento! A música ao vivo fez toda a diferença. Rachel tem uma sensibilidade única para escolher as canções certas para cada momento. Foi mágico!"</p>
                         <div class="text-center">
+                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=S+T" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Sofia & Thiago</h4>
                             <p class="text-sm text-gray-500">Casamento em Vinhedo, SP</p>
@@ -360,6 +370,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card">
+                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/C5A08A/1A3A40?text=Dicas+Musicais" class="w-full h-48 object-cover" alt="Dicas de música para casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Como escolher as músicas da cerimônia?</h3>
@@ -368,6 +379,7 @@
                         </div>
                     </div>
                     <div class="card">
+                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/B08D77/FFFFFF?text=Tendências+2025" class="w-full h-48 object-cover" alt="Tendências de música para casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Tendências musicais para casamentos 2025</h3>
@@ -376,6 +388,7 @@
                         </div>
                     </div>
                     <div class="card">
+                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/1A3A40/FFFFFF?text=Playlist+Perfeita" class="w-full h-48 object-cover" alt="Playlist para festa de casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">A playlist ideal para sua festa de casamento</h3>
@@ -416,7 +429,7 @@
                     <p class="font-playfair text-dark-teal text-2xl hover:text-rose-gold transition-colors"><a href="tel:+55XXYYYYYZZZZ">(XX) YYYYY-ZZZZ</a></p>
                     <div class="mt-8 flex justify-center space-x-6">
                         <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Facebook"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
-                        <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Instagram"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2.014a.828.828 0 01.518-.207c.34.03.665.194.836.486l.003.006.012.021c.033.051.06.106.082.163l.005.012.01.026.002.005c.069.17.104.35.104.537v1.21a3.749 3.749 0 001.164.013l1.45-.048c1.904-.063 3.517 1.218 3.733 3.052l.001.01.002.018c.058.491.088.99.088 1.494v.062c0 .53-.033 1.055-.098 1.568l-.006.05-.01.046c-.041.19-.09.377-.148.557l-.002.007-.004.013a4.095 4.095 0 01-3.73 3.013l-1.45.048a3.749 3.749 0 00-1.164.013v1.21c0 .187-.035.367-.104.537l-.002.005-.01.026-.005.012a.96.96 0 01-.082.163l-.012.021-.003.006a.902.902 0 01-.836.486.828.828 0 01-.518-.207l-.006-.005-.021-.017a.876.876 0 01-.18-.103l-.012-.008-.019-.013c-.045-.032-.088-.067-.128-.105l-.006-.006-.01-.01a.75.75 0 01-.092-.117l-.002-.003a.955.955 0 01-.08-.114l-.003-.006-.006-.013c-.026-.061-.047-.125-.062-.19l-.002-.007v-1.13a3.749 3.749 0 00-1.164-.013l-1.45.048a4.095 4.095 0 01-3.73-3.013l-.002-.007-.004-.013a.96.96 0 01-.148-.557l-.006-.05C3.033 13.055 3 12.53 3 12v-.062c0-.504.03-.993.088-1.484l.002-.018.001-.01c.216-1.834 1.829-3.115 3.733-3.052l1.45.048A3.749 3.749 0 0011.5 6.26V5.05c0-.187.035-.367.104-.537l.002-.007.006-.013a.75.75 0 01.062-.19l.003-.006.006-.013.002-.003a.955.955 0 01.08-.114l.002-.003.006-.006.01-.01a.75.75 0 01.092-.117l.006-.006.019-.013a.876.876 0 01.128-.105l.012-.008.006-.003.021-.017a.828.828 0 01.18-.103l.006-.005zm1.04 11.034a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm-.585-6.184a.75.75 0 10-1.06-1.06.75.75 0 001.06 1.06z" clip-rule="evenodd" /></svg></a>
+                        <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Instagram"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2.014a.828.828 0 01.518-.207c.34.03.665.194.836.486l.003.006.012.021c.033.051.06.106.082.163l.005.012.01.026.002.005c.069.17.104.35.104.537v1.21a3.749 3.749 0 001.164.013l1.45-.048c1.904-.063 3.517 1.218 3.733 3.052l.001.01.002.018c.058.491.088.99.088 1.494v.062c0 .53-.033 1.055-.098 1.568l-.006.05-.01.046c-.041.19-.09.377-.148.557l-.002.007-.004.013a4.095 4.095 0 01-3.73 3.013l-1.45.048a3.749 3.749 0 00-1.164.013v1.21c0 .187-.035.367-.104.537l-.002.005-.01.026-.005.012a.96.96 0 01-.082.163l-.012.021-.003.006a.902.902 0 01-.836.486.828.828 0 01-.518-.207l-.006-.005-.021-.017a.876.876 0 01-.18-.103l-.012-.008-.019-.013c-.045-.032-.088-.067-.128-.105l-.006-.006-.01-.01a.75.75 0 01-.092-.117l-.002-.003a.955.955 0 01-.08-.114l-.003-.006-.006-.013c-.026-.061-.047-.125-.062-.19l-.002-.007v-1.13a3.749 3.749 0 00-1.164-.013l-1.45.048a4.095 4.095 0 01-3.73-3.013l-.002-.007-.004-.013a.96.96 0 01-.148-.557l-.006-.05C3.033 13.055 3 12.53 3 12v-.062c0-.504.03-.993.088-1.484l.002-.018.001-.01c.216-1.834 1.829-3.115 3.733-3.052l1.45.048A3.749 3.749 0 0011.5 6.26V5.05c0-.187.035-.367.104-.537l-.002-.007.006-.013a.75.75 0 01.062-.19l.003-.006.006-.013.002-.003a.955.955 0 01.08-.114l-.002-.003.006-.006.01-.01a.75.75 0 01.092-.117l.006-.006.019-.013a.876.876 0 01.128-.105l.012-.008.006-.003.021-.017a.828.828 0 01.18-.103l.006-.005zm1.04 11.034a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm-.585-6.184a.75.75 0 10-1.06-1.06.75.75 0 001.06 1.06z" clip-rule="evenodd" /></svg></a>
                         <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="YouTube"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.75 5.091A.903.903 0 0019.02.98L4.98.98A.903.903 0 004.25 2a.908.908 0 000 .186v18.639A.903.903 0 005.02 23.02l14.04.005a.903.903 0 00.73-.909V5.091zm-8.866 14.01V11.33l-2.667 1.6V11.14l2.667-1.733h1.733v9.661h-1.733zm5.001-4.906c0 .909-.244 1.67-.733 2.284s-1.11.922-1.866.922c-.734 0-1.367-.308-1.867-.922s-.75-1.375-.75-2.284v-1.933c0-.909.25-1.67.75-2.284s1.133-.922 1.867-.922c.755 0 1.389.308 1.866.922s.733 1.375.733 2.284v1.933z"/></svg></a>
                     </div>
                 </div>
