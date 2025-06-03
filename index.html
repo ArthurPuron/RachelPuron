@@ -35,7 +35,8 @@
         }
         /* Aumentado o tamanho do h1, h2, h3, h4 */
         h1 { @apply text-6xl md:text-7xl lg:text-8xl font-bold; }
-        h2 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
+        /* Aumentado o tamanho do h2 */
+        h2 { @apply text-6xl md:text-7xl lg:text-8xl font-bold; } /* ORIGINAL: text-5xl md:text-6xl lg:text-7xl */
         h3 { @apply text-3xl md:text-4xl font-semibold; }
         h4 { @apply text-xl md:text-2xl lg:text-3xl font-medium; }
 
@@ -95,8 +96,8 @@
             @apply mb-6;
         }
         .section-title-center .subtitle {
-            /* Aumentado o tamanho e o margin-bottom do subtitle */
-            @apply text-3xl md:text-4xl font-dancing mb-6;
+            /* Aumentado o tamanho do subtitle */
+            @apply text-4xl md:text-5xl lg:text-6xl font-dancing mb-6; /* ORIGINAL: text-3xl md:text-4xl */
             color: var(--rose-gold); /* Cor padrão para subtítulos */
         }
         /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
@@ -193,7 +194,7 @@
             <div class="absolute inset-0 hero-overlay"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
                 <h1 class="font-playfair text-off-white mb-6">Rachel Purón</h1>
-                <p class="font-dancing text-4xl sm:text-5xl text-light-rose mb-10">Criando a Trilha Sonora Perfeita para o Seu Grande Dia</p>
+                <p class="font-dancing text-5xl sm:text-6xl text-light-rose mb-10">Criando a Trilha Sonora Perfeita para o Seu Grande Dia</p>
                 <a href="#contato" class="btn btn-primary text-lg">Descubra como podemos encantar seu casamento</a>
             </div>
         </section>
