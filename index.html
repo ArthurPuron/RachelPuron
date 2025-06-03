@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
@@ -34,11 +33,11 @@
             font-family: 'Playfair Display', serif;
             color: var(--dark-teal);
         }
-        h1 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
-        /* Aumentado o tamanho do h2 */
-        h2 { @apply text-5xl md:text-6xl font-bold; }
-        h3 { @apply text-2xl md:text-3xl font-semibold; }
-        h4 { @apply text-xl md:text-2xl font-medium; }
+        /* Aumentado o tamanho do h1, h2, h3, h4 */
+        h1 { @apply text-6xl md:text-7xl lg:text-8xl font-bold; }
+        h2 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
+        h3 { @apply text-3xl md:text-4xl font-semibold; }
+        h4 { @apply text-xl md:text-2xl lg:text-3xl font-medium; }
 
 
         .font-dancing {
@@ -74,7 +73,7 @@
             @apply bg-transparent text-rose-gold border-2 border-rose-gold hover:bg-rose-gold hover:text-off-white;
         }
         .btn-dark {
-             @apply bg-dark-teal text-off-white hover:bg-opacity-90;
+            @apply bg-dark-teal text-off-white hover:bg-opacity-90;
         }
 
         /* Aumentado o padding vertical das seções */
@@ -92,12 +91,12 @@
             /* Adicionar text-center diretamente aos h2 e p para maior robustez */
         }
         .section-title-center h2 {
-             /* Aumentado o margin-bottom do h2 */
-             @apply mb-6;
+            /* Aumentado o margin-bottom do h2 */
+            @apply mb-6;
         }
         .section-title-center .subtitle {
             /* Aumentado o tamanho e o margin-bottom do subtitle */
-            @apply text-2xl md:text-3xl font-dancing mb-6;
+            @apply text-3xl md:text-4xl font-dancing mb-6;
             color: var(--rose-gold); /* Cor padrão para subtítulos */
         }
         /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
@@ -156,7 +155,6 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- Header -->
     <header id="header" class="bg-off-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-20">
@@ -165,17 +163,14 @@
                         <img class="logo-img" src="https://i.imgur.com/TyVy6X2.png" alt="Logo Rachel Purón - Música para Casar">
                     </a>
                 </div>
-                <!-- Navigation Links (centered) -->
                 <div class="hidden md:flex flex-grow justify-center items-center space-x-1 lg:space-x-2">
                     <a href="#home" class="nav-link nav-link-active">Início</a>
                     <a href="#sobre" class="nav-link">Sobre Rachel</a>
                     <a href="#servicos" class="nav-link">Serviços</a>
-                    <a href="#equipe" class="nav-link">Equipe</a> <!-- Novo link para a seção Equipe -->
-                    <a href="#portfolio" class="nav-link">Portfólio</a>
+                    <a href="#equipe" class="nav-link">Equipe</a> <a href="#portfolio" class="nav-link">Portfólio</a>
                     <a href="#repertorio" class="nav-link">Repertório</a>
                     <a href="#depoimentos" class="nav-link">Depoimentos</a>
                 </div>
-                <!-- Button (right) -->
                 <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6">Agende uma conversa</a>
             </div>
         </nav>
@@ -183,8 +178,7 @@
             <a href="#home" class="nav-link-mobile">Início</a>
             <a href="#sobre" class="nav-link-mobile">Sobre Rachel</a>
             <a href="#servicos" class="nav-link-mobile">Serviços</a>
-            <a href="#equipe" class="nav-link-mobile">Equipe</a> <!-- Novo link para a seção Equipe Mobile -->
-            <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
+            <a href="#equipe" class="nav-link-mobile">Equipe</a> <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
             <a href="#repertorio" class="nav-link-mobile">Repertório</a>
             <a href="#depoimentos" class="nav-link-mobile">Depoimentos</a>
             <a href="#contato" class="nav-link-mobile bg-rose-gold text-off-white mt-2">Agende uma conversa</a>
@@ -192,11 +186,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="home" class="relative text-off-white overflow-hidden min-h-screen flex items-center justify-center">
-            <!-- Vídeo de fundo -->
             <video autoplay muted loop playsinline class="hero-video-bg" poster="https://placehold.co/1920x1080/1A3A40/F8F5F2?text=Momento+Musical+Inesquecível">
-                <!-- Substitua './videos/inicio.mp4' pelo link direto do seu vídeo hospedado (ex: Imgur ou outro CDN) -->
                 <source src="./videos/inicio.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 hero-overlay"></div>
@@ -207,16 +198,14 @@
             </div>
         </section>
 
-        <!-- Sobre Section -->
         <section id="sobre" class="section-padding">
             <div class="container mx-auto">
                 <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-2">
-                        <!-- Foto da Rachel Purón atualizada -->
                         <img src="https://i.imgur.com/CgzQnoX.png" alt="Rachel Purón" class="rounded-xl shadow-2xl w-full object-cover aspect-[4/5]">
                     </div>
                     <div class="lg:col-span-3">
-                        <p class="font-dancing text-rose-gold text-2xl mb-2">Paixão em cada nota</p>
+                        <p class="font-dancing text-rose-gold text-3xl md:text-4xl mb-2">Paixão em cada nota</p>
                         <h2 class="mb-6">Conheça Rachel Purón</h2>
                         <p class="text-lg text-text-light mb-4 leading-relaxed">
                             Com uma voz que cativa e uma presença que irradia sensibilidade, Rachel Purón é uma artista dedicada a transformar sonhos em melodias. Sua jornada musical é marcada pela paixão em conectar-se com as histórias de cada casal, traduzindo seus sentimentos em performances únicas e emocionantes.
@@ -229,80 +218,67 @@
             </div>
         </section>
 
-        <!-- Serviços Section -->
         <section id="servicos" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Sua Celebração, Nossa Sinfonia.</p>
                     <h2 class="text-center">Música Personalizada para o Seu Casamento</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Cerimônia no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Cerimônia" alt="Ícone Cerimônia" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Música para Cerimônia</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Encante seus convidados com melodias que tocam a alma durante a cerimônia. Solos, duetos, quartetos e formações instrumentais.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Recepção no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Recepção" alt="Ícone Recepção" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Música para Recepção</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Crie uma atmosfera elegante e acolhedora para o coquetel e jantar, com repertório que vai do jazz suave ao pop acústico.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <!-- Substitua o link do placehold.co pelo link direto do seu ícone de Festa no Imgur -->
                         <img src="https://placehold.co/100x100/C5A08A/1A3A40?text=Festa" alt="Ícone Festa" class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full">
                         <h3 class="mb-3 text-dark-teal">Banda para Festa</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Nossa banda traz energia e um repertório vibrante para animar a pista de dança e celebrar com todos os seus convidados.</p>
                     </div>
                 </div>
-                   <div class="text-center mt-12">
+                    <div class="text-center mt-12">
                     <a href="#contato" class="btn btn-primary">Solicite um orçamento detalhado</a>
                 </div>
             </div>
         </section>
 
-        <!-- Nova Seção: Equipe -->
         <section id="equipe" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Os Talentos que Fazem a Magia Acontecer.</p>
                     <h2 class="text-center">Conheça Nossa Equipe de Músicos</h2>
-                    <!-- Adicionado mb-8 para mais espaçamento -->
                     <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    <!-- Músico 1 -->
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/1A3A40/FFFFFF?text=Cantor+1" alt="Foto do Cantor" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Cantor</h3>
                         <p class="text-rose-gold text-sm mb-2">Vocalista Principal</p>
                         <p class="text-text-light text-xs">Voz potente e versátil, especialista em emocionar com baladas e clássicos.</p>
                     </div>
-                    <!-- Músico 2 -->
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/B08D77/FFFFFF?text=Violinista" alt="Foto do Violinista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Violinista</h3>
                         <p class="text-rose-gold text-sm mb-2">Violinista</p>
                         <p class="text-text-light text-xs">Mestre do violino, adiciona um toque de elegância e sofisticação a cada melodia.</p>
                     </div>
-                    <!-- Músico 3 -->
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/C5A08A/1A3A40?text=Pianista" alt="Foto do Pianista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Pianista</h3>
                         <p class="text-rose-gold text-sm mb-2">Pianista/Tecladista</p>
                         <p class="text-text-light text-xs">Talento no piano, criando harmonias ricas para cerimônias e recepções.</p>
                     </div>
-                    <!-- Músico 4 -->
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/1A3A40/FFFFFF?text=Violoncelo" alt="Foto do Violoncelista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Violoncelista</h3>
                         <p class="text-rose-gold text-sm mb-2">Violoncelista</p>
                         <p class="text-text-light text-xs">O som profundo do violoncelo que traz uma dimensão única e emocionante à música.</p>
                     </div>
-                    <!-- Músico 5 -->
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/B08D77/FFFFFF?text=Saxofonista" alt="Foto do Saxofonista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Saxofonista</h3>
@@ -313,18 +289,14 @@
             </div>
         </section>
 
-        <!-- Portfólio/Galeria Section -->
         <section id="portfolio" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Momentos que Ficam para Sempre.</p>
                     <h2 class="text-center">Nossa Galeria de Eventos</h2>
-                    <!-- Adicionado mb-8 para mais espaçamento -->
                     <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Explore a beleza e a emoção dos casamentos que já embalamos com nossa música.</p>
                 </div>
                 <div class="gallery-carousel mb-12">
-                    <!-- Substitua os links do placehold.co pelos links diretos das suas imagens de portfólio no Imgur -->
                     <div><img src="https://placehold.co/800x500/B08D77/FFFFFF?text=Casamento+Elegante+1" alt="Foto de casamento com música ao vivo 1" class="w-full h-auto object-cover"></div>
                     <div><img src="https://placehold.co/800x500/C5A08A/1A3A40?text=Performance+Musical+2" alt="Foto de casamento com música ao vivo 2" class="w-full h-auto object-cover"></div>
                     <div><img src="https://placehold.co/800x500/1A3A40/FFFFFF?text=Detalhe+Instrumento+3" alt="Foto de casamento com música ao vivo 3" class="w-full h-auto object-cover"></div>
@@ -335,29 +307,22 @@
                     <h3 class="mb-4">Vídeos de Performances</h3>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-                            <!-- Substitua 'https://www.youtube.com/embed/dQw4w9WgXcQ' pelo link real do seu vídeo do YouTube -->
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-                            <!-- Substitua 'https://www.youtube.com/embed/rokGy0huYEA' pelo link real do seu vídeo do YouTube -->
-                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/rokGy0huYEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/rokGy0huYEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                        <a href="#" class="btn btn-dark mt-10">Ver Mais no YouTube</a> <!-- Link para o canal -->
-                </div>
+                        <a href="#" class="btn btn-dark mt-10">Ver Mais no YouTube</a> </div>
             </div>
         </section>
 
-        <!-- Repertório Section -->
         <section id="repertorio" class="section-padding bg-dark-teal text-off-white">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-on-dark text-center">A Trilha Sonora Perfeita para o Seu Amor.</p>
                     <h2 class="!text-off-white text-center">Nosso Repertório Completo</h2>
-                    <!-- Adicionado mb-8 para mais espaçamento -->
-                    <p class="text-off-white max-w-xl mx-auto text-center mb-8">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> <!-- Novo texto descritivo com cor ajustada -->
-                </div>
+                    <p class="text-off-white max-w-xl mx-auto text-center mb-8">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
                         <h4 class="font-playfair text-rose-gold mb-2">Clássicos</h4>
@@ -378,17 +343,14 @@
                 </div>
                 <div class="mt-10 text-center">
                     <p class="text-gray-200 mb-6 max-w-xl mx-auto">Cada canção é escolhida e adaptada para refletir a personalidade e o gosto do casal, tornando cada momento único.</p>
-                    <!-- Substitua o link do placehold.co pelo link direto do seu PDF de repertório no Imgur ou outro serviço -->
                     <a href="https://placehold.co/1000x700/F8F5F2/1A3A40?text=Exemplo+de+Repertório+(PDF)" target="_blank" class="btn btn-secondary !text-off-white !border-off-white hover:!bg-off-white hover:!text-dark-teal">Baixar Sugestões de Repertório</a>
                 </div>
             </div>
         </section>
 
-        <!-- Depoimentos Section -->
         <section id="depoimentos" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">A Voz da Emoção</p>
                     <h2 class="text-center">O Que Nossos Noivos Dizem</h2>
                 </div>
@@ -396,7 +358,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Rachel, não temos palavras para agradecer a emoção que você trouxe ao nosso casamento. Sua voz é um anjo! Todos os convidados comentaram sobre a música da cerimônia. Foi perfeito!"</p>
                         <div class="text-center">
-                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=L+F" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Laura & Fernando</h4>
                             <p class="text-sm text-gray-500">Casamento em Itatiba, SP</p>
@@ -405,7 +366,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"A banda da festa foi incrível! Repertório de primeira, animação total e muito profissionalismo. Rachel e sua equipe fizeram a diferença na nossa celebração. Recomendamos de olhos fechados!"</p>
                         <div class="text-center">
-                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=A+M" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Ana Clara & Miguel</h4>
                             <p class="text-sm text-gray-500">Casamento em Campinas, SP</p>
@@ -414,7 +374,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Desde o primeiro contato, a Rachel foi extremamente atenciosa e entendeu perfeitamente o que queríamos. A música da recepção estava elegante e agradou a todos. Muito obrigada!"</p>
                         <div class="text-center">
-                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=P+G" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Patrícia & Gabriel</h4>
                             <p class="text-sm text-gray-500">Casamento em Jundiaí, SP</p>
@@ -423,7 +382,6 @@
                         <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Que talento! A música ao vivo fez toda a diferença. Rachel tem uma sensibilidade única para escolher as canções certas para cada momento. Foi mágico!"</p>
                         <div class="text-center">
-                            <!-- Substitua o link do placehold.co pelo link direto da foto do casal no Imgur -->
                             <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=S+T" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Sofia & Thiago</h4>
                             <p class="text-sm text-gray-500">Casamento em Vinhedo, SP</p>
@@ -433,17 +391,14 @@
             </div>
         </section>
         
-        <!-- Blog/Dicas Placeholder Section -->
         <section id="blog" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Inspiração para Noivos</p>
                     <h2 class="text-center">Dicas e Artigos Musicais</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card">
-                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/C5A08A/1A3A40?text=Dicas+Musicais" class="w-full h-48 object-cover" alt="Dicas de música para casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Como escolher as músicas da cerimônia?</h3>
@@ -452,7 +407,6 @@
                         </div>
                     </div>
                     <div class="card">
-                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/B08D77/FFFFFF?text=Tendências+2025" class="w-full h-48 object-cover" alt="Tendências de música para casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Tendências musicais para casamentos 2025</h3>
@@ -461,7 +415,6 @@
                         </div>
                     </div>
                     <div class="card">
-                        <!-- Substitua o link do placehold.co pelo link direto da sua imagem de artigo no Imgur -->
                         <img src="https://placehold.co/600x400/1A3A40/FFFFFF?text=Playlist+Perfeita" class="w-full h-48 object-cover" alt="Playlist para festa de casamento">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">A playlist ideal para sua festa de casamento</h3>
@@ -473,14 +426,11 @@
             </div>
         </section>
 
-        <!-- Contato Section -->
         <section id="contato" class="section-padding bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/F5F5F5/1A3A40?text=Textura+Suave');">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                        <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
-                       <p class="subtitle text-center">Vamos Realizar Seu Sonho</p>
+                        <p class="subtitle text-center">Vamos Realizar Seu Sonho</p>
                     <h2 class="text-center">Entre em Contato</h2>
-                    <!-- Adicionado mb-8 para mais espaçamento -->
                     <p class="!text-text-dark text-center mb-8">Adoraríamos fazer parte do seu dia especial. Envie uma mensagem para um orçamento personalizado.</p>
                 </div>
                 <div class="max-w-2xl mx-auto bg-off-white p-8 sm:p-10 rounded-xl shadow-2xl border border-rose-gold/20">
@@ -520,8 +470,7 @@
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
                 <a href="#sobre" class="text-gray-300 hover:text-off-white">Sobre</a>
                 <a href="#servicos" class="text-gray-300 hover:text-off-white">Serviços</a>
-                <a href="#equipe" class="text-gray-300 hover:text-off-white">Equipe</a> <!-- Link para a seção Equipe no rodapé -->
-                <a href="#portfolio" class="text-gray-300 hover:text-off-white">Portfólio</a>
+                <a href="#equipe" class="text-gray-300 hover:text-off-white">Equipe</a> <a href="#portfolio" class="text-gray-300 hover:text-off-white">Portfólio</a>
                 <a href="#repertorio" class="text-gray-300 hover:text-off-white">Repertório</a>
                 <a href="#depoimentos" class="text-gray-300 hover:text-off-white">Depoimentos</a>
                     <a href="#blog" class="text-gray-300 hover:text-off-white">Blog</a>
@@ -532,9 +481,7 @@
         </div>
     </footer>
 
-    <!-- jQuery (necessário para Slick Carousel) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Slick Carousel JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
