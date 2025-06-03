@@ -90,8 +90,14 @@
              @apply mb-4;
         }
         .section-title-center .subtitle {
-            @apply text-lg text-text-light max-w-2xl mx-auto font-dancing text-2xl text-rose-gold;
+            /* Ajustado para melhor hierarquia e contraste */
+            @apply text-xl text-rose-gold max-w-2xl mx-auto font-dancing mb-4; /* Removi text-lg e text-text-light redundantes */
         }
+        /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
+        .section-title-center .subtitle.text-on-dark {
+            color: var(--off-white); /* Garante bom contraste em fundos escuros */
+        }
+
 
         .contact-input {
             @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-rose-gold focus:border-transparent outline-none transition-shadow bg-white;
@@ -211,7 +217,6 @@
                         <p class="text-lg text-text-light mb-6 leading-relaxed">
                             Especialista em música para casamentos, Rachel combina técnica apurada com uma interpretação genuína, oferecendo um repertório que vai do clássico ao contemporâneo, sempre com arranjos sofisticados e personalizados. Seu maior objetivo é criar uma atmosfera mágica, onde cada canção se torna parte inesquecível da celebração do amor.
                         </p>
-                        <!-- Frase "Nossos Serviços Musicais" removida daqui -->
                     </div>
                 </div>
             </div>
@@ -221,9 +226,8 @@
         <section id="servicos" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Frases "Soluções Musicais Completas" e "Serviços Personalizados para Seu Casamento" removidas daqui -->
-                    <p class="subtitle">Sua melodia, nossa arte.</p> <!-- Novo subtítulo mais genérico -->
-                    <h2>Serviços que Oferecemos</h2> <!-- Novo título mais genérico -->
+                    <p class="subtitle">Sua Celebração, Nossa Sinfonia.</p> <!-- Novo subtítulo -->
+                    <h2>Música Personalizada para o Seu Casamento</h2> <!-- Novo título -->
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card p-8 text-center transform hover:-translate-y-2">
@@ -255,9 +259,9 @@
         <section id="equipe" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <p class="subtitle">Talento e Dedicação</p>
-                    <h2>Nossa Equipe de Músicos</h2>
-                    <p class="text-text-light max-w-2xl mx-auto">Conheça os profissionais que transformam seu evento em uma experiência sonora inesquecível.</p>
+                    <p class="subtitle">Os Talentos que Fazem a Magia Acontecer.</p> <!-- Novo subtítulo -->
+                    <h2>Conheça Nossa Equipe de Músicos</h2> <!-- Novo título -->
+                    <p class="text-text-light max-w-2xl mx-auto">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <!-- Músico 1 -->
@@ -303,8 +307,8 @@
         <section id="portfolio" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <p class="subtitle">Momentos Inesquecíveis</p>
-                    <h2>Nosso Portfólio</h2>
+                    <p class="subtitle">Momentos que Ficam para Sempre.</p> <!-- Novo subtítulo -->
+                    <h2>Nossa Galeria de Eventos</h2> <!-- Novo título -->
                 </div>
                 <div class="gallery-carousel mb-12">
                     <!-- Substitua os links do placehold.co pelos links diretos das suas imagens de portfólio no Imgur -->
@@ -335,8 +339,8 @@
         <section id="repertorio" class="section-padding bg-dark-teal text-off-white">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <p class="subtitle !text-light-rose">Sua História em Canções</p>
-                    <h2 class="!text-off-white">Repertório Versátil e Personalizado</h2>
+                    <p class="subtitle text-on-dark">A Trilha Sonora Perfeita para o Seu Amor.</p> <!-- Novo subtítulo com classe para contraste -->
+                    <h2 class="!text-off-white">Nosso Repertório Completo</h2> <!-- Novo título -->
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
@@ -514,140 +518,161 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-        // Script para menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const header = document.getElementById('header');
-        let menuOpen = false;
+        // Garante que o DOM esteja completamente carregado antes de executar o script
+        window.addEventListener('DOMContentLoaded', () => {
+            // Script para menu mobile
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const header = document.getElementById('header');
+            let menuOpen = false;
 
-        mobileMenuButton.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                mobileMenu.classList.remove('-translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-            } else {
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenu.classList.add('-translate-x-full');
+            if (mobileMenuButton) { // Verifica se o botão existe antes de adicionar o listener
+                mobileMenuButton.addEventListener('click', () => {
+                    menuOpen = !menuOpen;
+                    if (mobileMenu) { // Verifica se o menu existe
+                        if (menuOpen) {
+                            mobileMenu.classList.remove('-translate-x-full');
+                            mobileMenu.classList.add('translate-x-0');
+                        } else {
+                            mobileMenu.classList.remove('translate-x-0');
+                            mobileMenu.classList.add('-translate-x-full');
+                        }
+                    }
+                });
             }
-        });
 
-        const mobileNavLinks = mobileMenu.querySelectorAll('a');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuOpen = false;
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenu.classList.add('-translate-x-full');
+            const mobileNavLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : []; // Verifica se mobileMenu existe
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuOpen = false;
+                    if (mobileMenu) { // Verifica se o menu existe
+                        mobileMenu.classList.remove('translate-x-0');
+                        mobileMenu.classList.add('-translate-x-full');
+                    }
+                });
             });
-        });
 
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Header Style on Scroll
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-xl');
-                header.classList.remove('py-0'); // Ajuste conforme padding inicial do header
-            } else {
-                header.classList.remove('py-2', 'shadow-xl');
-                header.classList.add('py-0');
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
             }
-        });
 
-        // Smooth scroll e Active Nav Link
-        const navLinks = document.querySelectorAll('#header nav a[href^="#"], #mobile-menu a[href^="#"]');
-        const headerHeight = header.offsetHeight;
-
-        function updateActiveLink() {
-            let currentSectionId = "home"; // Default to home
-            document.querySelectorAll('main section[id]').forEach(section => {
-                const sectionTop = section.offsetTop;
-                // Considera o header e um pequeno offset para ativar o link um pouco antes
-                if (pageYOffset >= sectionTop - headerHeight - 50) {
-                    currentSectionId = section.getAttribute('id');
+            // Header Style on Scroll
+            window.addEventListener('scroll', function() {
+                if (header) { // Verifica se o header existe
+                    if (window.scrollY > 50) {
+                        header.classList.add('py-2', 'shadow-xl');
+                        header.classList.remove('py-0'); // Ajuste conforme padding inicial do header
+                    } else {
+                        header.classList.remove('py-2', 'shadow-xl');
+                        header.classList.add('py-0');
+                    }
                 }
             });
+
+            // Smooth scroll e Active Nav Link
+            const navLinks = document.querySelectorAll('#header nav a[href^="#"], #mobile-menu a[href^="#"]');
+            const headerHeight = header ? header.offsetHeight : 0; // Pega a altura do header ou 0 se não existir
+
+            function updateActiveLink() {
+                let currentSectionId = "home"; // Default to home
+                document.querySelectorAll('main section[id]').forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Considera o header e um pequeno offset para ativar o link um pouco antes
+                    if (pageYOffset >= sectionTop - headerHeight - 50) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-link-active');
+                    // Remove a classe de todos os links primeiro
+                    const desktopLink = document.querySelector(`#header nav a[href="#${currentSectionId}"]`);
+                    const mobileLink = document.querySelector(`#mobile-menu a[href="#${currentSectionId}"]`);
+
+                    if (desktopLink) desktopLink.classList.add('nav-link-active');
+                    if (mobileLink) { // Para o menu mobile, talvez uma classe diferente ou apenas garantir que o scroll funcione
+                        // mobileLink.classList.add('bg-rose-gold', 'text-off-white'); // Exemplo de destaque diferente
+                    }
+                });
+            }
             
-            navLinks.forEach(link => {
-                link.classList.remove('nav-link-active');
-                // Remove a classe de todos os links primeiro
-                const desktopLink = document.querySelector(`#header nav a[href="#${currentSectionId}"]`);
-                const mobileLink = document.querySelector(`#mobile-menu a[href="#${currentSectionId}"]`);
+            window.addEventListener('scroll', updateActiveLink);
+            window.addEventListener('load', updateActiveLink); // Chamada inicial ao carregar
 
-                if (desktopLink) desktopLink.classList.add('nav-link-active');
-                if (mobileLink) { // Para o menu mobile, talvez uma classe diferente ou apenas garantir que o scroll funcione
-                    // mobileLink.classList.add('bg-rose-gold', 'text-off-white'); // Exemplo de destaque diferente
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', updateActiveLink);
-        window.addEventListener('load', () => {
-            updateActiveLink(); // Initial check
             // Inicializar Slick Carousels
-            $('.testimonial-carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-
-            $('.gallery-carousel').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 3, // Ajuste conforme o número de imagens visíveis
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                centerMode: true,
-                variableWidth: true, // Permite larguras diferentes se necessário
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            variableWidth: false,
-                            centerMode: false,
-                        }
-                    }
-                ]
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const currentHeaderHeight = document.getElementById('header').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
+            // Verifica se jQuery está carregado e se os elementos existem antes de inicializar o Slick
+            if (typeof jQuery !== 'undefined') {
+                if ($('.testimonial-carousel').length) {
+                    $('.testimonial-carousel').slick({
+                        dots: true,
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 4000,
+                        arrows: false,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 2,
+                                }
+                            },
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 1,
+                                }
+                            }
+                        ]
                     });
                 }
+
+                if ($('.gallery-carousel').length) {
+                    $('.gallery-carousel').slick({
+                        dots: false,
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: 3, // Ajuste conforme o número de imagens visíveis
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        arrows: true,
+                        centerMode: true,
+                        variableWidth: true, // Permite larguras diferentes se necessário
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 1,
+                                    variableWidth: false,
+                                    centerMode: false,
+                                }
+                            }
+                        ]
+                    });
+                }
+            }
+
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const currentHeaderHeight = document.getElementById('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
             });
         });
     </script>
