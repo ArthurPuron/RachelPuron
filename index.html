@@ -84,14 +84,16 @@
             @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl;
         }
         .section-title-center {
-            @apply text-center mb-16;
+            /* Ajustado para centralizar o bloco inteiro e limitar sua largura */
+            @apply text-center mb-16 max-w-4xl mx-auto;
         }
         .section-title-center h2 {
              @apply mb-4;
         }
         .section-title-center .subtitle {
-            /* Ajustado para melhor hierarquia e contraste */
-            @apply text-xl text-rose-gold mx-auto font-dancing mb-4; /* Removi text-lg e text-text-light redundantes. Removido 'max-w-2xl' para permitir que o texto ocupe a largura total antes de ser centralizado pelo 'text-center' do pai */
+            /* Removido mx-auto, a centralização é feita pelo pai */
+            @apply text-xl font-dancing mb-4;
+            color: var(--rose-gold); /* Cor padrão para subtítulos */
         }
         /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
         .section-title-center .subtitle.text-on-dark {
