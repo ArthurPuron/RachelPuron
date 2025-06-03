@@ -33,11 +33,11 @@
             font-family: 'Playfair Display', serif;
             color: var(--dark-teal);
         }
-        /* Aumentado o tamanho do h1, h2, h3, h4 */
-        h1 { @apply text-6xl md:text-7xl lg:text-8xl font-bold; }
-        h2 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
-        h3 { @apply text-3xl md:text-4xl font-semibold; }
-        h4 { @apply text-xl md:text-2xl lg:text-3xl font-medium; }
+        /* Aumentado significativamente o tamanho dos títulos */
+        h1 { @apply text-7xl md:text-8xl lg:text-9xl font-bold; } /* Ainda maior para o título principal */
+        h2 { @apply text-6xl md:text-7xl lg:text-8xl font-bold; }
+        h3 { @apply text-4xl md:text-5xl font-semibold; }
+        h4 { @apply text-3xl md:text-4xl font-medium; }
 
 
         .font-dancing {
@@ -87,16 +87,14 @@
         .section-title-center {
             /* Ajustado para centralizar o bloco inteiro e limitar sua largura */
             @apply mb-16 max-w-4xl mx-auto;
-            /* A classe text-center do Tailwind CSS já é aplicada aqui para centralizar o texto */
-            /* Adicionar text-center diretamente aos h2 e p para maior robustez */
         }
         .section-title-center h2 {
             /* Aumentado o margin-bottom do h2 */
             @apply mb-6;
         }
         .section-title-center .subtitle {
-            /* Aumentado o tamanho e o margin-bottom do subtitle */
-            @apply text-3xl md:text-4xl font-dancing mb-6;
+            /* Aumentado o tamanho do subtitle */
+            @apply text-4xl md:text-5xl font-dancing mb-6; /* Subtítulos maiores */
             color: var(--rose-gold); /* Cor padrão para subtítulos */
         }
         /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
@@ -193,7 +191,7 @@
             <div class="absolute inset-0 hero-overlay"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
                 <h1 class="font-playfair text-off-white mb-6">Rachel Purón</h1>
-                <p class="font-dancing text-rose-gold mb-10 text-4xl sm:text-5xl">Criando a Trilha Sonora Perfeita para o Seu Grande Dia</p>
+                <p class="font-dancing text-light-rose mb-10 text-5xl sm:text-6xl">Criando a Trilha Sonora Perfeita para o Seu Grande Dia</p>
                 <a href="#contato" class="btn btn-primary text-lg">Descubra como podemos encantar seu casamento</a>
             </div>
         </section>
@@ -257,32 +255,27 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/1A3A40/FFFFFF?text=Cantor+1" alt="Foto do Cantor" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Cantor</h3>
-                        <p class="text-rose-gold text-sm mb-2">Vocalista Principal</p>
+                        <h3>Nome do Cantor</h3> <p class="text-rose-gold text-sm mb-2">Vocalista Principal</p>
                         <p class="text-text-light text-xs">Voz potente e versátil, especialista em emocionar com baladas e clássicos.</p>
                     </div>
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/B08D77/FFFFFF?text=Violinista" alt="Foto do Violinista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Violinista</h3>
-                        <p class="text-rose-gold text-sm mb-2">Violinista</p>
+                        <h3>Nome do Violinista</h3> <p class="text-rose-gold text-sm mb-2">Violinista</p>
                         <p class="text-text-light text-xs">Mestre do violino, adiciona um toque de elegância e sofisticação a cada melodia.</p>
                     </div>
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/C5A08A/1A3A40?text=Pianista" alt="Foto do Pianista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Pianista</h3>
-                        <p class="text-rose-gold text-sm mb-2">Pianista/Tecladista</p>
+                        <h3>Nome do Pianista</h3> <p class="text-rose-gold text-sm mb-2">Pianista/Tecladista</p>
                         <p class="text-text-light text-xs">Talento no piano, criando harmonias ricas para cerimônias e recepções.</p>
                     </div>
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/1A3A40/FFFFFF?text=Violoncelo" alt="Foto do Violoncelista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Violoncelista</h3>
-                        <p class="text-rose-gold text-sm mb-2">Violoncelista</p>
+                        <h3>Nome do Violoncelista</h3> <p class="text-rose-gold text-sm mb-2">Violoncelista</p>
                         <p class="text-text-light text-xs">O som profundo do violoncelo que traz uma dimensão única e emocionante à música.</p>
                     </div>
                     <div class="card p-6 text-center">
                         <img src="https://placehold.co/150x150/B08D77/FFFFFF?text=Saxofonista" alt="Foto do Saxofonista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Nome do Saxofonista</h3>
-                        <p class="text-rose-gold text-sm mb-2">Saxofonista</p>
+                        <h3>Nome do Saxofonista</h3> <p class="text-rose-gold text-sm mb-2">Saxofonista</p>
                         <p class="text-text-light text-xs">Um toque de jazz e modernidade com solos marcantes e envolventes.</p>
                     </div>
                 </div>
@@ -304,8 +297,7 @@
                     <div><img src="https://placehold.co/800x500/C5A08A/FFFFFF?text=Banda+em+Ação+5" alt="Foto de casamento com música ao vivo 5" class="w-full h-auto object-cover"></div>
                 </div>
                 <div class="text-center">
-                    <h3>Vídeos de Performances</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <h3>Vídeos de Performances</h3> <div class="grid md:grid-cols-2 gap-6">
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
@@ -325,20 +317,16 @@
                     <p class="text-off-white max-w-xl mx-auto text-center mb-8">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
-                        <h4>Clássicos</h4>
-                        <p class="text-off-white text-sm">Marcha Nupcial, Ave Maria, Canon in D, e outras peças atemporais.</p>
+                        <h4>Clássicos</h4> <p class="text-off-white text-sm">Marcha Nupcial, Ave Maria, Canon in D, e outras peças atemporais.</p>
                     </div>
                     <div>
-                        <h4>MPB & Bossa</h4>
-                        <p class="text-off-white text-sm">Tom Jobim, Vinicius, Chico Buarque, com arranjos sofisticados.</p>
+                        <h4>MPB & Bossa</h4> <p class="text-off-white text-sm">Tom Jobim, Vinicius, Chico Buarque, com arranjos sofisticados.</p>
                     </div>
                     <div>
-                        <h4>Pop Internacional</h4>
-                        <p class="text-off-white text-sm">Ed Sheeran, John Legend, Adele, Bruno Mars, e os hits do momento.</p>
+                        <h4>Pop Internacional</h4> <p class="text-off-white text-sm">Ed Sheeran, John Legend, Adele, Bruno Mars, e os hits do momento.</p>
                     </div>
                     <div>
-                        <h4>Trilhas Sonoras</h4>
-                        <p class="text-off-white text-sm">Temas de filmes românticos e emocionantes para inspirar.</p>
+                        <h4>Trilhas Sonoras</h4> <p class="text-off-white text-sm">Temas de filmes românticos e emocionantes para inspirar.</p>
                     </div>
                 </div>
                 <div class="mt-10 text-center">
@@ -358,7 +346,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Rachel, não temos palavras para agradecer a emoção que você trouxe ao nosso casamento. Sua voz é um anjo! Todos os convidados comentaram sobre a música da cerimônia. Foi perfeito!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=L+F" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4>Laura & Fernando</h4>
                             <p class="text-sm text-gray-500">Casamento em Itatiba, SP</p>
                         </div>
@@ -366,7 +353,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"A banda da festa foi incrível! Repertório de primeira, animação total e muito profissionalismo. Rachel e sua equipe fizeram a diferença na nossa celebração. Recomendamos de olhos fechados!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=A+M" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4>Ana Clara & Miguel</h4>
                             <p class="text-sm text-gray-500">Casamento em Campinas, SP</p>
                         </div>
@@ -374,7 +360,6 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Desde o primeiro contato, a Rachel foi extremamente atenciosa e entendeu perfeitamente o que queríamos. A música da recepção estava elegante e agradou a todos. Muito obrigada!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=P+G" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4>Patrícia & Gabriel</h4>
                             <p class="text-sm text-gray-500">Casamento em Jundiaí, SP</p>
                         </div>
@@ -382,7 +367,6 @@
                         <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Que talento! A música ao vivo fez toda a diferença. Rachel tem uma sensibilidade única para escolher as canções certas para cada momento. Foi mágico!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=S+T" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4>Sofia & Thiago</h4>
                             <p class="text-sm text-gray-500">Casamento em Vinhedo, SP</p>
                         </div>
@@ -401,24 +385,21 @@
                     <div class="card">
                         <img src="https://placehold.co/600x400/C5A08A/1A3A40?text=Dicas+Musicais" class="w-full h-48 object-cover" alt="Dicas de música para casamento">
                         <div class="p-6">
-                            <h3>Como escolher as músicas da cerimônia?</h3>
-                            <p class="text-text-light text-sm mb-4">Dicas essenciais para criar uma trilha sonora emocionante e pessoal.</p>
+                            <h3>Como escolher as músicas da cerimônia?</h3> <p class="text-text-light text-sm mb-4">Dicas essenciais para criar uma trilha sonora emocionante e pessoal.</p>
                             <a href="#" class="font-semibold text-rose-gold hover:underline text-sm">Ler Artigo →</a>
                         </div>
                     </div>
                     <div class="card">
                         <img src="https://placehold.co/600x400/B08D77/FFFFFF?text=Tendências+2025" class="w-full h-48 object-cover" alt="Tendências de música para casamento">
                         <div class="p-6">
-                            <h3>Tendências musicais para casamentos 2025</h3>
-                            <p class="text-text-light text-sm mb-4">Fique por dentro do que está em alta para embalar o seu grande dia.</p>
+                            <h3>Tendências musicais para casamentos 2025</h3> <p class="text-text-light text-sm mb-4">Fique por dentro do que está em alta para embalar o seu grande dia.</p>
                             <a href="#" class="font-semibold text-rose-gold hover:underline text-sm">Ler Artigo →</a>
                         </div>
                     </div>
                     <div class="card">
                         <img src="https://placehold.co/600x400/1A3A40/FFFFFF?text=Playlist+Perfeita" class="w-full h-48 object-cover" alt="Playlist para festa de casamento">
                         <div class="p-6">
-                            <h3>A playlist ideal para sua festa de casamento</h3>
-                            <p class="text-text-light text-sm mb-4">Dicas para montar uma seleção que agrade a todos os gostos.</p>
+                            <h3>A playlist ideal para sua festa de casamento</h3> <p class="text-text-light text-sm mb-4">Dicas para montar uma seleção que agrade a todos os gostos.</p>
                             <a href="#" class="font-semibold text-rose-gold hover:underline text-sm">Ler Artigo →</a>
                         </div>
                     </div>
@@ -454,7 +435,7 @@
                     <p class="font-playfair text-dark-teal text-2xl hover:text-rose-gold transition-colors"><a href="tel:+55XXYYYYYZZZZ">(XX) YYYYY-ZZZZ</a></p>
                     <div class="mt-8 flex justify-center space-x-6">
                         <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Facebook"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
-                        <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Instagram"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2.014a.828.828 0 01.518-.207c.34.03.665.194.836.486l.003.006.012.021c.033.051.06.106.082.163l.005.012.01.026.002.005c.069.17.104.35.104.537v1.21a3.749 3.749 0 001.164.013l1.45-.048c1.904-.063 3.517 1.218 3.733 3.052l.001.01.002.018c.058.491.088.99.088 1.494v.062c0 .53-.033 1.055-.098 1.568l-.006.05-.01.046c-.041.19-.09.377-.148.557l-.002.007-.004.013a4.095 4.095 0 01-3.73 3.013l-1.45.048a3.749 3.749 0 00-1.164.013v1.21c0 .187-.035.367-.104.537l-.002.005-.01.026-.005.012a.96.96 0 01-.082.163l-.012.021-.003.006a.902.902 0 01-.836.486.828.828 0 01-.518-.207l-.006-.005-.021-.017a.876.876 0 01-.18-.103l-.012-.008-.019-.013c-.045-.032-.088-.067-.128-.105l-.006-.006-.01-.01a.75.75 0 01-.092-.117l-.002-.003a.955.955 0 01-.08-.114l-.003-.006-.006-.013c-.026-.061-.047-.125-.062-.19l-.002-.007v-1.13a3.749 3.749 0 00-1.164-.013l-1.45.048a4.095 4.095 0 01-3.73-3.013l-.002-.007-.004-.013a.96.96 0 01-.148-.557l-.006-.05C3.033 13.055 3 12.53 3 12v-.062c0-.504.03-.993.088-1.484l.002-.018.001-.01c.216-1.834 1.829-3.115 3.733-3.052l1.45.048A3.749 3.749 0 0011.5 6.26V5.05c0-.187.035-.367.104-.537l-.002-.007.006-.013a.75.75 0 01.062-.19l.003-.006.006-.013.002-.003a.955.955 0 01.08-.114l-.002-.003.006-.006.01-.01a.75.75 0 01.092-.117l.006-.006.019-.013a.876.876 0 01.128-.105l.012-.008.006-.003.021-.017a.828.828 0 01.18-.103l.006-.005zm1.04 11.034a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm-.585-6.184a.75.75 0 10-1.06-1.06.75.75 0 001.06 1.06z" clip-rule="evenodd" /></svg></a>
+                        <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Instagram"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2.014a.828.828 0 01.518-.207c.34.03.665.194.836.486l.003.006.012.021c.033.051.06.106.082.163l.005.012.01.026.002.005c.069.17.104.35.104.537v1.21a3.749 3.749 0 001.164.013l1.45-.048c1.904-.063 3.517 1.218 3.733 3.052l.001.01.002.018c.058.491.088.99.088 1.494v.062c0 .53-.033 1.055-.098 1.568l-.006.05-.01.046c-.041.19-.09.377-.148.557l-.002.007-.004.013a4.095 4.095 0 01-3.73 3.013l-1.45.048a3.749 3.749 0 00-1.164.013v1.21c0 .187-.035.367-.104.537l-.002.005-.01.026-.005.012a.96.96 0 01-.082.163l-.012.021-.003.006a.902.902 0 01-.836.486.828.828 0 01-.518-.207l-.006-.005-.021-.017a.876.876 0 01-.18-.103l-.012-.008-.019-.013c-.045-.032-.088-.067-.128-.105l-.006-.006-.01-.01a.75.75 0 01-.092-.117l-.002-.003a.955.955 0 01-.08-.114l-.003-.006-.006-.013c-.026-.061-.047-.125-.062-.19l-.002-.007v-1.13a3.749 3.749 0 00-1.164-.013l-1.45.048a4.095 4.095 0 01-3.73-3.013l-.002-.007-.004-.013a.96.96 0 01-.148-.557l-.006-.05C3.033 13.055 3 12.53 3 12v-.062c0-.504.03-.993.088-1.484l.002-.018.001-.01c.216-1.834 1.829-3.115 3.733-3.052l1.45.048A3.749 3.749 0 0011.5 6.26V5.05c0-.187.035-.367.104-.537l-.002-.007.006-.013a.75.75 0 01.062-.19l.003-.006.006-.013.002-.003a.955.955 0 01.08-.114l-.002-.003.006-.006.01-.01a.75.75 0 01.092-.117l-.006-.006.019-.013a.876.876 0 01.128-.105l.012-.008.006-.003.021-.017a.828.828 0 01.18-.103l-.006-.005zm1.04 11.034a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm-.585-6.184a.75.75 0 10-1.06-1.06.75.75 0 001.06 1.06z" clip-rule="evenodd" /></svg></a>
                         <a href="#" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="YouTube"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.75 5.091A.903.903 0 0019.02.98L4.98.98A.903.903 0 004.25 2a.908.908 0 000 .186v18.639A.903.903 0 005.02 23.02l14.04.005a.903.903 0 00.73-.909V5.091zm-8.866 14.01V11.33l-2.667 1.6V11.14l2.667-1.733h1.733v9.661h-1.733zm5.001-4.906c0 .909-.244 1.67-.733 2.284s-1.11.922-1.866.922c-.734 0-1.367-.308-1.867-.922s-.75-1.375-.75-2.284v-1.933c0-.909.25-1.67.75-2.284s1.133-.922 1.867-.922c.755 0 1.389.308 1.866.922s.733 1.375.733 2.284v1.933z"/></svg></a>
                     </div>
                 </div>
