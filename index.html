@@ -35,7 +35,8 @@
             color: var(--dark-teal);
         }
         h1 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
-        h2 { @apply text-4xl md:text-5xl font-bold; }
+        /* Aumentado o tamanho do h2 */
+        h2 { @apply text-5xl md:text-6xl font-bold; }
         h3 { @apply text-2xl md:text-3xl font-semibold; }
         h4 { @apply text-xl md:text-2xl font-medium; }
 
@@ -76,8 +77,9 @@
              @apply bg-dark-teal text-off-white hover:bg-opacity-90;
         }
 
+        /* Aumentado o padding vertical das seções */
         .section-padding {
-            @apply py-20 lg:py-28 px-4 sm:px-6 lg:px-8;
+            @apply py-24 lg:py-36 px-4 sm:px-6 lg:px-8;
         }
 
         .card {
@@ -90,11 +92,12 @@
             /* Adicionar text-center diretamente aos h2 e p para maior robustez */
         }
         .section-title-center h2 {
-             @apply mb-4;
+             /* Aumentado o margin-bottom do h2 */
+             @apply mb-6;
         }
         .section-title-center .subtitle {
-            /* Removido mx-auto, a centralização é feita pelo pai */
-            @apply text-xl font-dancing mb-4;
+            /* Aumentado o tamanho e o margin-bottom do subtitle */
+            @apply text-2xl md:text-3xl font-dancing mb-6;
             color: var(--rose-gold); /* Cor padrão para subtítulos */
         }
         /* Específico para o subtítulo em seções de fundo escuro para melhor contraste */
@@ -230,7 +233,7 @@
         <section id="servicos" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Sua Celebração, Nossa Sinfonia.</p>
                     <h2 class="text-center">Música Personalizada para o Seu Casamento</h2>
                 </div>
@@ -264,10 +267,11 @@
         <section id="equipe" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Os Talentos que Fazem a Magia Acontecer.</p>
                     <h2 class="text-center">Conheça Nossa Equipe de Músicos</h2>
-                    <p class="text-text-light max-w-2xl mx-auto text-center">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
+                    <!-- Adicionado mb-8 para mais espaçamento -->
+                    <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <!-- Músico 1 -->
@@ -313,10 +317,11 @@
         <section id="portfolio" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Momentos que Ficam para Sempre.</p>
                     <h2 class="text-center">Nossa Galeria de Eventos</h2>
-                    <p class="text-text-light max-w-2xl mx-auto text-center">Explore a beleza e a emoção dos casamentos que já embalamos com nossa música.</p>
+                    <!-- Adicionado mb-8 para mais espaçamento -->
+                    <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Explore a beleza e a emoção dos casamentos que já embalamos com nossa música.</p>
                 </div>
                 <div class="gallery-carousel mb-12">
                     <!-- Substitua os links do placehold.co pelos links diretos das suas imagens de portfólio no Imgur -->
@@ -347,10 +352,11 @@
         <section id="repertorio" class="section-padding bg-dark-teal text-off-white">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-on-dark text-center">A Trilha Sonora Perfeita para o Seu Amor.</p>
                     <h2 class="!text-off-white text-center">Nosso Repertório Completo</h2>
-                    <p class="text-off-white max-w-xl mx-auto text-center">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> <!-- Novo texto descritivo com cor ajustada -->
+                    <!-- Adicionado mb-8 para mais espaçamento -->
+                    <p class="text-off-white max-w-xl mx-auto text-center mb-8">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> <!-- Novo texto descritivo com cor ajustada -->
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
@@ -382,7 +388,7 @@
         <section id="depoimentos" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">A Voz da Emoção</p>
                     <h2 class="text-center">O Que Nossos Noivos Dizem</h2>
                 </div>
@@ -431,7 +437,7 @@
         <section id="blog" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Adicionado text-center para garantir centralização explícita -->
+                    <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                     <p class="subtitle text-center">Inspiração para Noivos</p>
                     <h2 class="text-center">Dicas e Artigos Musicais</h2>
                 </div>
@@ -471,10 +477,11 @@
         <section id="contato" class="section-padding bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/F5F5F5/1A3A40?text=Textura+Suave');">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                        <!-- Adicionado text-center para garantir centralização explícita -->
+                        <!-- Adicionado text-center para garantir centralização explícita e aumentado o espaçamento -->
                        <p class="subtitle text-center">Vamos Realizar Seu Sonho</p>
                     <h2 class="text-center">Entre em Contato</h2>
-                    <p class="!text-text-dark text-center">Adoraríamos fazer parte do seu dia especial. Envie uma mensagem para um orçamento personalizado.</p>
+                    <!-- Adicionado mb-8 para mais espaçamento -->
+                    <p class="!text-text-dark text-center mb-8">Adoraríamos fazer parte do seu dia especial. Envie uma mensagem para um orçamento personalizado.</p>
                 </div>
                 <div class="max-w-2xl mx-auto bg-off-white p-8 sm:p-10 rounded-xl shadow-2xl border border-rose-gold/20">
                     <form action="#" method="POST" class="space-y-6">
