@@ -165,6 +165,25 @@
             opacity: 0;
             transform: rotate(-90deg);
         }
+
+        /* Estilos específicos para a seção da equipe */
+        .category-card {
+            @apply cursor-pointer p-8 text-center rounded-xl shadow-lg transition-all duration-300 bg-white hover:shadow-2xl hover:scale-105;
+        }
+        .category-card img {
+            @apply w-24 h-24 mx-auto mb-6 p-4 bg-rose-gold/10 rounded-full object-contain;
+        }
+        .musician-detail-section {
+            display: none; /* Escondido por padrão */
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .musician-detail-section.active {
+            display: block; /* Mostra quando ativo */
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -183,7 +202,8 @@
                     <a href="#portfolio" class="nav-link">Portfólio</a>
                     <a href="#repertorio" class="nav-link">Repertório</a>
                     <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                    <a href="#blog" class="nav-link">Blog</a> </div>
+                    <a href="#blog" class="nav-link">Blog</a>
+                </div>
                 <div class="flex items-center">
                     <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6 hidden md:inline-block">Agende uma conversa</a>
                     <div class="-mr-2 flex md:hidden">
@@ -208,7 +228,8 @@
             <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
             <a href="#repertorio" class="nav-link-mobile">Repertório</a>
             <a href="#depoimentos" class="nav-link-mobile">Depoimentos</a>
-            <a href="#blog" class="nav-link-mobile">Blog</a> <a href="#contato" class="nav-link-mobile bg-rose-gold text-off-white mt-2">Agende uma conversa</a>
+            <a href="#blog" class="nav-link-mobile">Blog</a>
+            <a href="#contato" class="nav-link-mobile bg-rose-gold text-off-white mt-2">Agende uma conversa</a>
         </div>
     </header>
 
@@ -253,17 +274,17 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c0 2.879 1.13 5.51 2.944 7.508A12.007 12.007 0 0012 21.056c2.879 0 5.51-1.13 7.508-2.944A12.007 12.007 0 0021.056 12a11.955 11.955 0 01-3.04-8.618z"></path></svg>
+                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-.342-.342a4.5 4.5 0 00-6.073-6.073z"></path></svg>
                         <h3 class="mb-3 text-dark-teal">Música para Cerimônia</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Encante seus convidados com melodias que tocam a alma durante a cerimônia. Solos, duetos, quartetos e formações instrumentais.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 13.5l-2.628 3.633a1 1 0 01-1.393.266L4 15m4 0l-1.393.266a1 1 0 00-1.393.266L2 17.5m10 0l-2.628 3.633a1 1 0 01-1.393.266L8 19.5m4 0l-1.393.266a1 1 0 00-1.393.266L6 21.5m12-9c0 2.761-2.239 5-5 5h-2c-2.761 0-5-2.239-5-5s2.239-5 5-5h2c2.761 0 5 2.239 5 5z"></path></svg>
+                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM9 13.29c0 1.157-1.133 2.055-2.536 1.839l-1.04-1.298a1 1 0 01-.17-.798l.613-2.022c.216-.714.288-1.464.209-2.222a1 1 0 011.085-.929l2.766-.192c.624-.044 1.258.077 1.838.351M15 13.29c0 1.157 1.133 2.055 2.536 1.839l1.04-1.298a1 1 0 00.17-.798l-.613-2.022c-.216-.714-.288-1.464-.209-2.222a1 1 0 00-1.085-.929l-2.766-.192c-.624-.044-1.258-.077-1.838-.351M12 21v-8m0 0a2 2 0 00-2 2v2a2 2 0 004 0v-2a2 2 0 00-2-2z"></path></svg>
                         <h3 class="mb-3 text-dark-teal">Música para Recepção</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Crie uma atmosfera elegante e acolhedora para o coquetel e jantar, com repertório que vai do jazz suave ao pop acústico.</p>
                     </div>
                     <div class="card p-8 text-center transform hover:-translate-y-2">
-                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6m6-6v12"></path></svg>
+                        <svg class="w-20 h-20 mx-auto mb-6 p-3 bg-rose-gold/10 rounded-full text-rose-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         <h3 class="mb-3 text-dark-teal">Banda para Festa</h3>
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Nossa banda traz energia e um repertório vibrante para animar a pista de dança e celebrar com todos os seus convidados.</p>
                     </div>
@@ -276,47 +297,150 @@
 
         <section id="equipe" class="section-padding">
             <div class="container mx-auto">
-                <div class="section-title-center">
+                <div class="section-title-center" id="team-main-title">
                     <p class="subtitle text-center">Os Talentos que Fazem a Magia Acontecer.</p>
                     <h2 class="text-center">Conheça Nossa Equipe de Músicos</h2>
                     <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/qJKIT7w.png" alt="Foto de Rachel Purón, vocalista principal" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Rachel Purón</h3>
-                        <p class="text-rose-gold text-sm mb-2">Vocalista Principal</p>
-                        <p class="text-text-light text-xs">A voz que encanta e emociona, líder e diretora musical da equipe.</p>
+
+                <div id="team-categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
+                    <div class="category-card" data-category="voices">
+                        <img src="https://i.imgur.com/vHqQJ0D.png" alt="Ícone de microfone representando Vozes">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Vozes</h3>
+                        <p class="text-rose-gold text-sm">Nossas cantoras e cantores</p>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/7s3Z2Zh.png" alt="Foto de Tom Keneddy, pianista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Tom Keneddy</h3>
-                        <p class="text-rose-gold text-sm mb-2">Pianista</p>
-                        <p class="text-text-light text-xs">Talento no piano, criando harmonias ricas para cerimônias e recepções.</p>
+                    <div class="category-card" data-category="guitar">
+                        <img src="https://i.imgur.com/FpB5N00.png" alt="Ícone de violão">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Violão</h3>
+                        <p class="text-rose-gold text-sm">Mestres das cordas</p>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/Rgi9Llh.png" alt="Foto de Sylas Rampazzo, violonista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Sylas Rampazzo</h3>
-                        <p class="text-rose-gold text-sm mb-2">Violão</p>
-                        <p class="text-text-light text-xs">Mestre do violão, adiciona um toque aconchegante e melódico.</p>
+                    <div class="category-card" data-category="cello">
+                        <img src="https://i.imgur.com/w1jXg2l.png" alt="Ícone de violoncelo">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Violoncelo</h3>
+                        <p class="text-rose-gold text-sm">Harmonias profundas</p>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/RxtaxTc.png" alt="Foto de Edmar Soares, violinista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Edmar Soares</h3>
-                        <p class="text-rose-gold text-sm mb-2">Violinista</p>
-                        <p class="text-text-light text-xs">Um toque de elegância e sofisticação com as cordas do violino.</p>
+                    <div class="category-card" data-category="violin">
+                        <img src="https://i.imgur.com/s6z1O2e.png" alt="Ícone de violino">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Violino</h3>
+                        <p class="text-rose-gold text-sm">Melodias elegantes</p>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/UGMu0tl.png" alt="Foto de Franco, violoncelista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Franco</h3>
-                        <p class="text-rose-gold text-sm mb-2">Violoncelo</p>
-                        <p class="text-text-light text-xs">O som profundo do violoncelo que traz uma dimensão única e emocionante à música.</p>
+                    <div class="category-card" data-category="piano">
+                        <img src="https://i.imgur.com/b9i9R3c.png" alt="Ícone de piano">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Piano</h3>
+                        <p class="text-rose-gold text-sm">As teclas que encantam</p>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="https://i.imgur.com/W9KbL8P.png" alt="Foto de Thiago Cesar, baterista" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
-                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Thiago Cesar</h3>
-                        <p class="text-rose-gold text-sm mb-2">Baterista</p>
-                        <p class="text-text-light text-xs">O ritmo pulsante e a energia que animam qualquer celebração.</p>
+                    <div class="category-card" data-category="saxophone">
+                        <img src="https://i.imgur.com/U8hA0B4.png" alt="Ícone de saxofone">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Saxofone</h3>
+                        <p class="text-rose-gold text-sm">O charme do jazz e clássico</p>
+                    </div>
+                    <div class="category-card" data-category="drums">
+                        <img src="https://i.imgur.com/t1W1D6y.png" alt="Ícone de bateria">
+                        <h3 class="text-xl font-semibold mb-1 text-dark-teal">Baterista</h3>
+                        <p class="text-rose-gold text-sm">O ritmo da sua festa</p>
+                    </div>
+                </div>
+
+                <div id="team-details" class="mt-12">
+                    <div id="category-voices" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Vocalistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/qJKIT7w.png" alt="Foto de Rachel Purón" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Rachel Purón</h4>
+                                <p class="text-rose-gold text-sm mb-2">Vocalista Principal</p>
+                                <p class="text-text-light text-xs">A voz que encanta e emociona, líder e diretora musical da equipe.</p>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div id="category-guitar" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Violonistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/Rgi9Llh.png" alt="Foto de Sylas Rampazzo" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Sylas Rampazzo</h4>
+                                <p class="text-rose-gold text-sm mb-2">Violão</p>
+                                <p class="text-text-light text-xs">Mestre do violão, adiciona um toque aconchegante e melódico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="category-cello" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Violoncelistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/UGMu0tl.png" alt="Foto de Franco" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Franco</h4>
+                                <p class="text-rose-gold text-sm mb-2">Violoncelo</p>
+                                <p class="text-text-light text-xs">O som profundo do violoncelo que traz uma dimensão única e emocionante à música.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="category-violin" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Violinistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/RxtaxTc.png" alt="Foto de Edmar Soares" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Edmar Soares</h4>
+                                <p class="text-rose-gold text-sm mb-2">Violinista</p>
+                                <p class="text-text-light text-xs">Um toque de elegância e sofisticação com as cordas do violino.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="category-piano" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Pianistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/7s3Z2Zh.png" alt="Foto de Tom Keneddy" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Tom Keneddy</h4>
+                                <p class="text-rose-gold text-sm mb-2">Pianista</p>
+                                <p class="text-text-light text-xs">Talento no piano, criando harmonias ricas para cerimônias e recepções.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="category-saxophone" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Saxofonistas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="text-center text-text-light">
+                            <p>Em breve, adicionaremos mais talentos nesta categoria!</p>
+                            <img src="https://placehold.co/200x200/F5F5F5/1A3A40?text=Saxofone" alt="Placeholder para futuro saxofonista" class="w-48 h-48 mx-auto my-8 rounded-full object-cover">
+                        </div>
+                    </div>
+
+                    <div id="category-drums" class="musician-detail-section">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="text-4xl font-playfair text-dark-teal">Bateristas</h3>
+                            <button class="btn btn-secondary !py-2 !px-4 text-sm" data-action="back-to-categories">← Voltar às Categorias</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            <div class="card p-6 text-center">
+                                <img src="https://i.imgur.com/W9KbL8P.png" alt="Foto de Thiago Cesar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
+                                <h4 class="text-xl font-semibold mb-1 text-dark-teal">Thiago Cesar</h4>
+                                <p class="text-rose-gold text-sm mb-2">Baterista</p>
+                                <p class="text-text-light text-xs">O ritmo pulsante e a energia que animam qualquer celebração.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -346,7 +470,7 @@
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Performance de Casamento Exemplo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <a href="https://www.youtube.com/@SeuCanalNoYouTube" target="_blank" class="btn btn-dark mt-10">Ver Mais no YouTube</a> 
+                    <a href="https://www.youtube.com/@RachelPuronOficial" target="_blank" class="btn btn-dark mt-10">Ver Mais no YouTube</a> 
                 </div>
             </div>
         </section>
@@ -490,7 +614,7 @@
                     <div class="mt-8 flex justify-center space-x-6">
                         <a href="https://facebook.com/rachelpuronoficial" target="_blank" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Facebook"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
                         <a href="https://instagram.com/rachelpuron" target="_blank" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="Instagram"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2.014a.828.828 0 01.518-.207c.34.03.665.194.836.486l.003.006.012.021c.033.051.06.106.082.163l.005.012.01.026.002.005c.069.17.104.35.104.537v1.21a3.749 3.749 0 001.164.013l1.45-.048c1.904-.063 3.517 1.218 3.733 3.052l.001.01.002.018c.058.491.088.99.088 1.494v.062c0 .53-.033 1.055-.098 1.568l-.006.05-.01.046c-.041.19-.09.377-.148.557l-.002.007-.004.013a4.095 4.095 0 01-3.73 3.013l-1.45.048a3.749 3.749 0 00-1.164.013v1.21c0 .187-.035.367-.104.537l-.002.005-.01.026-.005.012a.96.96 0 01-.082.163l-.012.021-.003.006a.902.902 0 01-.836.486.828.828 0 01-.518-.207l-.006-.005-.021-.017a.876.876 0 01-.18-.103l-.012-.008-.019-.013c-.045-.032-.088-.067-.128-.105l-.006-.006-.01-.01a.75.75 0 01-.092-.117l-.002-.003a.955.955 0 01-.08-.114l-.003-.006-.006-.013c-.026-.061-.047-.125-.062-.19l-.002-.007v-1.13a3.749 3.749 0 00-1.164-.013l-1.45.048a4.095 4.095 0 01-3.73-3.013l-.002-.007-.004-.013a.96.96 0 01-.148-.557l-.006-.05C3.033 13.055 3 12.53 3 12v-.062c0-.504.03-.993.088-1.484l.002-.018.001-.01c.216-1.834 1.829-3.115 3.733-3.052l1.45.048A3.749 3.749 0 0011.5 6.26V5.05c0-.187.035-.367.104-.537l-.002-.007.006-.013a.75.75 0 01.062-.19l.003-.006.006-.013.002-.003a.955.955 0 01.08-.114l-.002-.003.006-.006.01-.01a.75.75 0 01.092-.117l-.006-.006.019-.013a.876.876 0 01.128-.105l.012-.008.006-.003.021-.017a.828.828 0 01.18-.103l.006-.005zm1.04 11.034a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm-.585-6.184a.75.75 0 10-1.06-1.06.75.75 0 001.06 1.06z" clip-rule="evenodd" /></svg></a>
-                        <a href="https://youtube.com/@rachelpuron" target="_blank" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="YouTube"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.75 5.091A.903.903 0 0019.02.98L4.98.98A.903.903 0 004.25 2a.908.908 0 000 .186v18.639A.903.903 0 005.02 23.02l14.04.005a.903.903 0 00.73-.909V5.091zm-8.866 14.01V11.33l-2.667 1.6V11.14l2.667-1.733h1.733v9.661h-1.733zm5.001-4.906c0 .909-.244 1.67-.733 2.284s-1.11.922-1.866.922c-.734 0-1.367-.308-1.867-.922s-.75-1.375-.75-2.284v-1.933c0-.909.25-1.67.75-2.284s1.133-.922 1.867-.922c.755 0 1.389.308 1.866.922s.733 1.375.733 2.284v1.933z"/></svg></a>
+                        <a href="https://www.youtube.com/@RachelPuronOficial" target="_blank" class="text-gray-500 hover:text-rose-gold transition-colors" aria-label="YouTube"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.75 5.091A.903.903 0 0019.02.98L4.98.98A.903.903 0 004.25 2a.908.908 0 000 .186v18.639A.903.903 0 005.02 23.02l14.04.005a.903.903 0 00.73-.909V5.091zm-8.866 14.01V11.33l-2.667 1.6V11.14l2.667-1.733h1.733v9.661h-1.733zm5.001-4.906c0 .909-.244 1.67-.733 2.284s-1.11.922-1.866.922c-.734 0-1.367-.308-1.867-.922s-.75-1.375-.75-2.284v-1.933c0-.909.25-1.67.75-2.284s1.133-.922 1.867-.922c.755 0 1.389.308 1.866.922s.733 1.375.733 2.284v1.933z"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -509,7 +633,8 @@
                 <a href="#portfolio" class="text-gray-300 hover:text-off-white">Portfólio</a>
                 <a href="#repertorio" class="text-gray-300 hover:text-off-white">Repertório</a>
                 <a href="#depoimentos" class="text-gray-300 hover:text-off-white">Depoimentos</a>
-                <a href="#blog" class="text-gray-300 hover:text-off-white">Blog</a> <a href="#contato" class="text-gray-300 hover:text-off-white">Contato</a>
+                <a href="#blog" class="text-gray-300 hover:text-off-white">Blog</a>
+                <a href="#contato" class="text-gray-300 hover:text-off-white">Contato</a>
             </div>
             <p class="text-sm text-gray-400">© <span id="currentYear"></span> Rachel Purón - Música para Casar.</p>
             <p class="text-xs text-gray-500 mt-2">Todos os direitos reservados. Site por [Seu Nome/Sua Empresa Aqui]</p>
@@ -586,13 +711,11 @@
             
             function updateActiveLink() {
                 let currentSectionId = "home"; // Default to home
-                // Calcula a altura atual do header para ajustar o offset do scroll
                 const dynamicHeaderHeight = header ? header.offsetHeight : 0; 
 
                 document.querySelectorAll('main section[id]').forEach(section => {
                     const sectionTop = section.offsetTop;
-                    // Ativa o link um pouco antes da seção aparecer completamente no topo
-                    if (pageYOffset >= sectionTop - dynamicHeaderHeight - 80) { // Adicionado um offset maior
+                    if (pageYOffset >= sectionTop - dynamicHeaderHeight - 80) {
                         currentSectionId = section.getAttribute('id');
                     }
                 });
@@ -602,19 +725,14 @@
                     if (link.getAttribute('href') === `#${currentSectionId}`) {
                         link.classList.add('nav-link-active');
                     }
-                    // Para o menu mobile, desativa o destaque bg-rose-gold ao alternar a seção
                     if (mobileMenu && link.closest('#mobile-menu')) {
                          link.classList.remove('bg-rose-gold', 'text-off-white');
-                         if (link.getAttribute('href') === `#${currentSectionId}`) {
-                            // Se o link do menu mobile também precisa de um destaque diferente, aplique aqui
-                            // Por exemplo: link.classList.add('bg-rose-gold', 'text-off-white');
-                         }
                     }
                 });
             }
             
             window.addEventListener('scroll', updateActiveLink);
-            window.addEventListener('load', updateActiveLink); // Chamada inicial ao carregar
+            window.addEventListener('load', updateActiveLink);
 
             // Inicializar Slick Carousels
             if (typeof jQuery !== 'undefined') {
@@ -675,14 +793,87 @@
                                     slidesToShow: 1,
                                     variableWidth: false,
                                     centerMode: false,
-                                    arrows: false, /* Remover setas no mobile */
-                                    dots: true, /* Adicionar dots no mobile */
+                                    arrows: false,
+                                    dots: true,
                                 }
                             }
                         ]
                     });
                 }
             }
+
+            // Lógica para a nova seção "Equipe" (Categorias e Detalhes)
+            const teamCategoriesSection = document.getElementById('team-categories');
+            const teamDetailSections = document.querySelectorAll('.musician-detail-section');
+            const backToCategoriesButtons = document.querySelectorAll('[data-action="back-to-categories"]');
+            const teamMainTitle = document.getElementById('team-main-title'); // Título principal da seção equipe
+
+            // Esconder todas as seções de detalhe ao carregar
+            teamDetailSections.forEach(section => section.style.display = 'none');
+
+            // Adicionar evento de clique para os cards de categoria
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Esconde as categorias e o título principal
+                    teamCategoriesSection.style.display = 'none';
+                    teamMainTitle.style.display = 'none';
+
+                    // Mostra a seção de detalhe correspondente
+                    teamDetailSections.forEach(section => {
+                        if (section.id === `category-${category}`) {
+                            section.style.display = 'block';
+                            setTimeout(() => section.classList.add('active'), 10); // Pequeno atraso para a transição
+                        } else {
+                            section.classList.remove('active');
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    // Scroll para a seção de detalhes
+                    const targetElement = document.getElementById('equipe');
+                    if (targetElement) {
+                        const currentHeaderHeight = header.offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // Adicionar evento de clique para os botões "Voltar às Categorias"
+            backToCategoriesButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Esconde todas as seções de detalhe
+                    teamDetailSections.forEach(section => {
+                        section.classList.remove('active');
+                        section.style.display = 'none';
+                    });
+
+                    // Mostra as categorias e o título principal
+                    teamCategoriesSection.style.display = 'grid'; // Volta para grid display
+                    teamMainTitle.style.display = 'block';
+
+                    // Scroll de volta para a seção principal da equipe
+                    const targetElement = document.getElementById('equipe');
+                    if (targetElement) {
+                        const currentHeaderHeight = header.offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
 
             // Smooth scroll generalizado para todos os links com #
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
