@@ -158,30 +158,46 @@
 <body class="antialiased">
     <header id="header" class="bg-off-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center h-20">
+            <div class="flex items-center h-20 justify-between md:justify-start">
                 <div class="flex-shrink-0">
                     <a href="#home">
                         <img class="logo-img" src="https://i.imgur.com/TyVy6X2.png" alt="Logo Rachel Purón - Música para Casar">
                     </a>
                 </div>
+                <!-- Botão do Menu Mobile (visível apenas em telas pequenas) -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-rose-gold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-gold" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menu principal</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
                 <div class="hidden md:flex flex-grow justify-center items-center space-x-1 lg:space-x-2">
                     <a href="#home" class="nav-link nav-link-active">Início</a>
                     <a href="#sobre" class="nav-link">Sobre Rachel</a>
                     <a href="#servicos" class="nav-link">Serviços</a>
-                    <a href="#equipe" class="nav-link">Equipe</a> <a href="#portfolio" class="nav-link">Portfólio</a>
+                    <a href="#equipe" class="nav-link">Equipe</a>
+                    <a href="#portfolio" class="nav-link">Portfólio</a>
                     <a href="#repertorio" class="nav-link">Repertório</a>
                     <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    <a href="#blog" class="nav-link">Blog</a> <!-- Adicionado link para o Blog -->
                 </div>
-                <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6">Agende uma conversa</a>
+                <a href="#contato" class="ml-4 btn btn-primary text-sm py-2.5 px-6 hidden md:block">Agende uma conversa</a>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden bg-off-white shadow-xl absolute w-full transform -translate-x-full py-3 px-4">
             <a href="#home" class="nav-link-mobile">Início</a>
             <a href="#sobre" class="nav-link-mobile">Sobre Rachel</a>
             <a href="#servicos" class="nav-link-mobile">Serviços</a>
-            <a href="#equipe" class="nav-link-mobile">Equipe</a> <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
+            <a href="#equipe" class="nav-link-mobile">Equipe</a>
+            <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
             <a href="#repertorio" class="nav-link-mobile">Repertório</a>
             <a href="#depoimentos" class="nav-link-mobile">Depoimentos</a>
+            <a href="#blog" class="nav-link-mobile">Blog</a> <!-- Adicionado link para o Blog no mobile -->
             <a href="#contato" class="nav-link-mobile bg-rose-gold text-off-white mt-2">Agende uma conversa</a>
         </div>
     </header>
@@ -194,7 +210,6 @@
             <div class="absolute inset-0 hero-overlay"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
                 <h1 class="font-playfair text-off-white mb-6">Rachel Purón</h1>
-                <!-- Aumentado o tamanho desta frase aqui -->
                 <p class="font-dancing text-5xl sm:text-6xl text-light-rose mb-10">Criando a Trilha Sonora Perfeita para o Seu Grande Dia</p>
                 <a href="#contato" class="btn btn-primary text-lg">Descubra como podemos encantar seu casamento</a>
             </div>
@@ -223,7 +238,6 @@
         <section id="servicos" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-center">Sua Celebração, Nossa Sinfonia.</p>
                     <h2 class="text-center">Música Personalizada para o Seu Casamento</h2>
                 </div>
@@ -244,7 +258,7 @@
                         <p class="text-text-light mb-4 text-sm leading-relaxed">Nossa banda traz energia e um repertório vibrante para animar a pista de dança e celebrar com todos os seus convidados.</p>
                     </div>
                 </div>
-                    <div class="text-center mt-12">
+                <div class="text-center mt-12">
                     <a href="#contato" class="btn btn-primary">Solicite um orçamento detalhado</a>
                 </div>
             </div>
@@ -253,7 +267,6 @@
         <section id="equipe" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-center">Os Talentos que Fazem a Magia Acontecer.</p>
                     <h2 class="text-center">Conheça Nossa Equipe de Músicos</h2>
                     <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Profissionais dedicados a transformar seu evento em uma experiência sonora inesquecível.</p>
@@ -290,7 +303,6 @@
                         <p class="text-rose-gold text-sm mb-2">Violoncelo</p>
                         <p class="text-text-light text-xs">O som profundo do violoncelo que traz uma dimensão única e emocionante à música.</p>
                     </div>
-                    <!-- Novo músico adicionado -->
                     <div class="card p-6 text-center">
                         <img src="https://i.imgur.com/W9KbL8P.png" alt="Foto de Thiago Cesar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-rose-gold">
                         <h3 class="text-xl font-semibold mb-1 text-dark-teal">Thiago Cesar</h3>
@@ -304,36 +316,34 @@
         <section id="portfolio" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-center">Momentos que Ficam para Sempre.</p>
                     <h2 class="text-center">Nossa Galeria de Eventos</h2>
                     <p class="text-text-light max-w-2xl mx-auto text-center mb-8">Explore a beleza e a emoção dos casamentos que já embalamos com nossa música.</p>
                 </div>
                 <div class="gallery-carousel mb-12">
-                    <div><img src="https://placehold.co/800x500/B08D77/FFFFFF?text=Casamento+Elegante+1" alt="Foto de casamento com música ao vivo 1" class="w-full h-auto object-cover"></div>
-                    <div><img src="https://placehold.co/800x500/C5A08A/1A3A40?text=Performance+Musical+2" alt="Foto de casamento com música ao vivo 2" class="w-full h-auto object-cover"></div>
-                    <div><img src="https://placehold.co/800x500/1A3A40/FFFFFF?text=Detalhe+Instrumento+3" alt="Foto de casamento com música ao vivo 3" class="w-full h-auto object-cover"></div>
-                    <div><img src="https://placehold.co/800x500/B08D77/1A3A40?text=Noivos+Felizes+4" alt="Foto de casamento com música ao vivo 4" class="w-full h-auto object-cover"></div>
-                    <div><img src="https://placehold.co/800x500/C5A08A/FFFFFF?text=Banda+em+Ação+5" alt="Foto de casamento com música ao vivo 5" class="w-full h-auto object-cover"></div>
+                    <div><img src="https://placehold.co/800x500/B08D77/FFFFFF?text=Casamento+Elegante+1" alt="Casal de noivos em casamento elegante com música ao vivo" class="w-full h-auto object-cover"></div>
+                    <div><img src="https://placehold.co/800x500/C5A08A/1A3A40?text=Performance+Musical+2" alt="Músicos realizando performance musical em evento de casamento" class="w-full h-auto object-cover"></div>
+                    <div><img src="https://placehold.co/800x500/1A3A40/FFFFFF?text=Detalhe+Instrumento+3" alt="Close-up de instrumento musical em casamento" class="w-full h-auto object-cover"></div>
+                    <div><img src="https://placehold.co/800x500/B08D77/1A3A40?text=Noivos+Felizes+4" alt="Noivos sorrindo e celebrando durante casamento" class="w-full h-auto object-cover"></div>
+                    <div><img src="https://placehold.co/800x500/C5A08A/FFFFFF?text=Banda+em+Ação+5" alt="Banda de casamento tocando ao vivo em festa" class="w-full h-auto object-cover"></div>
                 </div>
                 <div class="text-center">
                     <h3 class="mb-4">Vídeos de Performances</h3>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Performance Musical de Casamento 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/rokGy0huYEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/rokGy0huYEA" title="Performance Musical de Casamento 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                        <a href="#" class="btn btn-dark mt-10">Ver Mais no YouTube</a> </div>
+                    <a href="#" class="btn btn-dark mt-10">Ver Mais no YouTube</a> </div>
             </div>
         </section>
 
         <section id="repertorio" class="section-padding bg-dark-teal text-off-white">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-on-dark text-center">A Trilha Sonora Perfeita para o Seu Amor.</p>
                     <h2 class="!text-off-white text-center">Nosso Repertório Completo</h2>
                     <p class="text-off-white max-w-xl mx-auto text-center mb-8">De clássicos atemporais a sucessos modernos, temos a melodia ideal para cada momento do seu grande dia.</p> </div>
@@ -365,7 +375,6 @@
         <section id="depoimentos" class="section-padding">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-center">A Voz da Emoção</p>
                     <h2 class="text-center">O Que Nossos Noivos Dizem</h2>
                 </div>
@@ -373,7 +382,7 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Rachel, não temos palavras para agradecer a emoção que você trouxe ao nosso casamento. Sua voz é um anjo! Todos os convidados comentaram sobre a música da cerimônia. Foi perfeito!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=L+F" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
+                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=L+F" alt="Foto do Casal Laura e Fernando" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Laura & Fernando</h4>
                             <p class="text-sm text-gray-500">Casamento em Itatiba, SP</p>
                         </div>
@@ -381,7 +390,7 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"A banda da festa foi incrível! Repertório de primeira, animação total e muito profissionalismo. Rachel e sua equipe fizeram a diferença na nossa celebração. Recomendamos de olhos fechados!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=A+M" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
+                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=A+M" alt="Foto do Casal Ana Clara e Miguel" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Ana Clara & Miguel</h4>
                             <p class="text-sm text-gray-500">Casamento em Campinas, SP</p>
                         </div>
@@ -389,15 +398,15 @@
                     <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Desde o primeiro contato, a Rachel foi extremamente atenciosa e entendeu perfeitamente o que queríamos. A música da recepção estava elegante e agradou a todos. Muito obrigada!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=P+G" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
+                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=P+G" alt="Foto do Casal Patrícia e Gabriel" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Patrícia & Gabriel</h4>
                             <p class="text-sm text-gray-500">Casamento em Jundiaí, SP</p>
                         </div>
                     </div>
-                        <div class="card p-8 !shadow-xl">
+                    <div class="card p-8 !shadow-xl">
                         <p class="italic text-text-light mb-6 text-center">"Que talento! A música ao vivo fez toda a diferença. Rachel tem uma sensibilidade única para escolher as canções certas para cada momento. Foi mágico!"</p>
                         <div class="text-center">
-                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=S+T" alt="Foto do Casal" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
+                            <img src="https://placehold.co/80x80/1A3A40/FFFFFF?text=S+T" alt="Foto do Casal Sofia e Thiago" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-rose-gold">
                             <h4 class="font-semibold text-rose-gold">Sofia & Thiago</h4>
                             <p class="text-sm text-gray-500">Casamento em Vinhedo, SP</p>
                         </div>
@@ -409,13 +418,12 @@
         <section id="blog" class="section-padding bg-light-gray">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                    <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
                     <p class="subtitle text-center">Inspiração para Noivos</p>
                     <h2 class="text-center">Dicas e Artigos Musicais</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card">
-                        <img src="https://placehold.co/600x400/C5A08A/1A3A40?text=Dicas+Musicais" class="w-full h-48 object-cover" alt="Dicas de música para casamento">
+                        <img src="https://placehold.co/600x400/C5A08A/1A3A40?text=Dicas+Musicais" class="w-full h-48 object-cover" alt="Dicas de música para casamento, com partitura e flores">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Como escolher as músicas da cerimônia?</h3>
                             <p class="text-text-light text-sm mb-4">Dicas essenciais para criar uma trilha sonora emocionante e pessoal.</p>
@@ -423,7 +431,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="https://placehold.co/600x400/B08D77/FFFFFF?text=Tendências+2025" class="w-full h-48 object-cover" alt="Tendências de música para casamento">
+                        <img src="https://placehold.co/600x400/B08D77/FFFFFF?text=Tendências+2025" class="w-full h-48 object-cover" alt="Tendências de música para casamento, com casal dançando">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">Tendências musicais para casamentos 2025</h3>
                             <p class="text-text-light text-sm mb-4">Fique por dentro do que está em alta para embalar o seu grande dia.</p>
@@ -431,7 +439,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="https://placehold.co/600x400/1A3A40/FFFFFF?text=Playlist+Perfeita" class="w-full h-48 object-cover" alt="Playlist para festa de casamento">
+                        <img src="https://placehold.co/600x400/1A3A40/FFFFFF?text=Playlist+Perfeita" class="w-full h-48 object-cover" alt="Playlist para festa de casamento, com fones de ouvido e vinil">
                         <div class="p-6">
                             <h3 class="mb-2 text-xl">A playlist ideal para sua festa de casamento</h3>
                             <p class="text-text-light text-sm mb-4">Dicas para montar uma seleção que agrade a todos os gostos.</p>
@@ -445,8 +453,7 @@
         <section id="contato" class="section-padding bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/F5F5F5/1A3A40?text=Textura+Suave');">
             <div class="container mx-auto">
                 <div class="section-title-center">
-                        <!-- Essas já foram aumentadas via CSS no .subtitle e h2 -->
-                        <p class="subtitle text-center">Vamos Realizar Seu Sonho</p>
+                    <p class="subtitle text-center">Vamos Realizar Seu Sonho</p>
                     <h2 class="text-center">Entre em Contato</h2>
                     <p class="!text-text-dark text-center mb-8">Adoraríamos fazer parte do seu dia especial. Envie uma mensagem para um orçamento personalizado.</p>
                 </div>
@@ -482,15 +489,16 @@
     <footer class="bg-dark-teal text-off-white py-16">
         <div class="container mx-auto text-center px-4">
             <a href="#home" class="inline-block mb-6">
-                <img src="https://i.imgur.com/TyVy6X2.png" alt="Logo Rachel Purón Rodapé" class="h-12 sm:h-14 opacity-80 hover:opacity-100 transition-opacity">
+                <img src="./imagem/logodourada.png" type="video/mp4" alt="Logo Rachel Purón Rodapé" class="h-12 sm:h-14 opacity-80 hover:opacity-100 transition-opacity">
             </a>
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
                 <a href="#sobre" class="text-gray-300 hover:text-off-white">Sobre</a>
                 <a href="#servicos" class="text-gray-300 hover:text-off-white">Serviços</a>
-                <a href="#equipe" class="text-gray-300 hover:text-off-white">Equipe</a> <a href="#portfolio" class="text-gray-300 hover:text-off-white">Portfólio</a>
+                <a href="#equipe" class="text-gray-300 hover:text-off-white">Equipe</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-off-white">Portfólio</a>
                 <a href="#repertorio" class="text-gray-300 hover:text-off-white">Repertório</a>
                 <a href="#depoimentos" class="text-gray-300 hover:text-off-white">Depoimentos</a>
-                    <a href="#blog" class="text-gray-300 hover:text-off-white">Blog</a>
+                <a href="#blog" class="text-gray-300 hover:text-off-white">Blog</a> <!-- Adicionado link para o Blog no footer -->
                 <a href="#contato" class="text-gray-300 hover:text-off-white">Contato</a>
             </div>
             <p class="text-sm text-gray-400">© <span id="currentYear"></span> Rachel Purón - Música para Casar.</p>
@@ -570,17 +578,24 @@
                     }
                 });
                 
-                navLinks.forEach(link => {
+                // Remove 'nav-link-active' de todos os links de desktop e mobile
+                document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(link => {
                     link.classList.remove('nav-link-active');
-                    // Remove a classe de todos os links primeiro
-                    const desktopLink = document.querySelector(`#header nav a[href="#${currentSectionId}"]`);
-                    const mobileLink = document.querySelector(`#mobile-menu a[href="#${currentSectionId}"]`);
-
-                    if (desktopLink) desktopLink.classList.add('nav-link-active');
-                    if (mobileLink) { // Para o menu mobile, talvez uma classe diferente ou apenas garantir que o scroll funcione
-                        // mobileLink.classList.add('bg-rose-gold', 'text-off-white'); // Exemplo de destaque diferente
-                    }
+                    // Remove classes de destaque específicas para mobile se existirem
+                    link.classList.remove('bg-rose-gold', 'text-off-white'); 
                 });
+
+                // Adiciona 'nav-link-active' ao link de desktop correspondente
+                const desktopLink = document.querySelector(`#header nav a[href="#${currentSectionId}"]`);
+                if (desktopLink) {
+                    desktopLink.classList.add('nav-link-active');
+                }
+
+                // Adiciona classes de destaque ao link de mobile correspondente
+                const mobileLink = document.querySelector(`#mobile-menu a[href="#${currentSectionId}"]`);
+                if (mobileLink) {
+                    mobileLink.classList.add('bg-rose-gold', 'text-off-white'); // Exemplo de destaque diferente
+                }
             }
             
             window.addEventListener('scroll', updateActiveLink);
